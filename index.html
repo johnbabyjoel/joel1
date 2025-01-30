@@ -1,0 +1,198 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <script>
+        alert("Hi!")
+        let doIt=()=>{
+           x=document.getElementById("bw").value;
+        {
+            if(x>15)
+           {
+              alert ("Overweight");
+
+          }
+        }
+      }
+
+      //Exercise 2
+    let clickHere=()=>{
+        alert("Multiples");
+        // a=document.getElementById("multiples").value;
+        //   {
+             let sum = 0; 
+             for (a = 0; a <1000; a++) 
+             {
+                 if (a % 3 === 0 || a % 5 === 0) 
+                 { 
+                    sum += a; 
+                } 
+            }
+            alert("sum is " + sum);
+       // }
+    }
+//Exercise 3
+    function Multiples(a, b, n) {
+            let sum = 0;
+            for (let i = 1; i < n; i++) {
+                if (i % a === 0 || i % b === 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+            
+        }
+        function Click() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let n = document.getElementById("n").value;
+            
+            let result = Multiples(a, b, n);
+            alert("The sum of multiples of " + a + " or " + b + " below " + n + " is: " + result);
+        }           
+          
+
+          //Exercise 4
+          function sumOfMultiples(a, b, l) {
+            let arrays = []; 
+            let sum = 0;
+
+           
+            for (let i = 1; i <= l; i++) {
+                if (i % a === 0 || i % b === 0) {
+                    arrays.push(i);  
+                    sum += i;           
+                }
+            }
+
+            return sum;
+        }
+
+        
+        function Click1() {
+           
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let l = document.getElementById("l").value;
+
+            let result = sumOfMultiples(a, b, l);
+            alert("The sum of multiples of " + a + " or " + b + " up to " + l + " is: " + result);
+        }
+
+
+        //Exercise 5
+
+        function sumOfMultiples(a, l) {
+            let sum = 0;
+            for (let i = 0; i < l.length; i++) {
+                if (l[i] % a[0] === 0 || l[i] % a[1] === 0) {
+                    sum += l[i];  
+                }
+            }
+            
+            return sum;
+        }
+
+        
+        function Click2() {
+           
+            let a = document.getElementById("a").value.split(',').map(Number);  
+            let l = document.getElementById("l").value.split(',').map(Number);  
+            let result = sumOfMultiples(a, l);
+            alert("The sum of multiples of " + a[0] + " or " + a[1] + " in the array l is: " + result);
+        }
+
+
+        
+    </script>
+</head>
+<body>
+    
+    <p>This is body text</p>
+    <p>Hello World!</p>
+    <p>Excerise 1:</p>
+    <p>Create a page with a button and input. This should prompt the user for their baggage weight.</p>
+    <p>When the user clicks submit,</p>
+    <p>If the weight is over the limit of 15kgs, it should alert the user that the bag is overweight.</p>
+    <p>The prompt:<input type ="text" id="bw" ,width= "6"><button onclick="doIt()">The button Text(Submit Maybe?)</button></p>
+
+
+
+<p>Exercise 2:</p>
+<p>Create a page with a button</p>
+<p>When the user clicks,</p>
+<p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
+    The sum of these multiples is 23.</p>
+<p>Find the sum of all the multiples of 3 or 5 below 1000 and alert the user to the correct answer.</p>
+<p>The prompt: <input type ="text" id= "multiples" ,width ="6"><button onclick="clickHere()">Press me!</button></p>
+
+<p>Exercise 3, Functions:</p>
+        <p>Create a page with a button and three input boxes, labelled a, b and n</p>
+        <p>When the user clicks, </p>
+        <p>
+            <p>Create a function to return the sum of all the multiples of a or b below n</p>
+            <p>Call the function and alert the user to the correct answer when they press the button.</p>
+</p>
+<label>Enter value of a </label>
+<input type="text" id="a" ><br>
+<label>Enter value of b</label>
+<input type="text" id="b"><br>
+<label>Enter value of n</label>
+<input type="text" id="n" ><br>
+        <p><button onclick="Click()">Press me!</button></p>
+
+      
+      
+        <p>Exercise 4, Arrays:</p>
+        <p>Create a page with a button and three input boxes, labelled a, b and l, l should be a large input</p>
+        <p>Create a function to return the sum of all the multiples of a or b in l</p>
+        <p>Call the function and alert the user to the correct answer when they press the button.</p>
+        </p>
+
+        <label>Enter value of a </label>
+<input type="text" id="a" ><br>
+<label>Enter value of b</label>
+<input type="text" id="b"><br>
+<label>Enter value of l</label>
+<input type="text" id="l" ><br>
+        <p><button onclick="Click1()">Press me!</button></p>
+      
+      
+        <p>Exercise 5, Arrays:</p>
+        <p>Create a page with a button and two wide input boxes, labelled a and l</p>
+        <p>Create a function to return the sum of all the multiples of factors in a found in in l (a and l should be arrays of integers and a is of length 2)</p>
+        <p>Call the function and alert the user to the correct answer when they press the button.</p>
+        </p>
+    <p>
+        <label>Enter value of a</label>
+        <input type="text" id="a"><br>
+        <label>Enter value of l</label>
+        <input type="text" id="l" ><br></p>
+        <p><button onclick="Click2()">Press me!</button></p>
+
+
+
+        <p>Exercise 6, Arrays:</p>
+        <p>Create a page with a button and two wide input boxes, labelled a and l</p>
+        <p>Create a function to return the sum of all the multiples of factors in a found in in l (a and l should be arrays of integers)</p>
+        <p>Call the function and alert the user to the correct answer when they press the button.</p>
+        </p>
+        <p>You may find the split function useful for creating arrays from the strings entered: <a href="https://www.w3schools.com/jsref/jsref_split.asp">Split</a></p>
+        <p>
+            <label>Enter value of a</label>
+            <input type="text" id="a"><br>
+            <label>Enter value of l</label>
+            <input type="text" id="l" ><br></p>
+            <p><button onclick="Click2()">Press me!</button></p>
+    
+    
+
+</body>
+</html>
+</body>
+</html>
